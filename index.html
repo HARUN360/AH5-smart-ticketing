@@ -1,11 +1,268 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment-5</title>
+    <!-- daisyUi link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font famaly -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@100..900&family=Poppins:wght@300;400;500;600&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- css style -->
+    <style>
+        *{
+            list-style: none;
+        }
+        .font-raleway {
+            font-family: "Raleway", sans-serif;
+        }
+
+        .font-inter {
+            font-family: "Inter", sans-serif;
+        }
+        .seat{
+            list-style: none;
+            background-color: #E6E6E7;
+            color: #03071280;
+            padding: 10px 0px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
-<body>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quidem.</h1>
+
+<body class="font-raleway">
+    <!-- header -->
+    <header class="container mx-auto">
+        <!-- navbar here -->
+        <nav>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-[#030712B3] font-medium text-[18px] space-x-4">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Destination</a></li>
+                            <li><a>Search</a></li>
+
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost text-4xl text-[#030712] font-extrabold">P-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 text-[#030712B3] font-medium text-[18px] space-x-4">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end ">
+                    <a class="btn text-[#1DD100] font-bold text-xl bg-[#E8FAE5] border-1  border-[#1DD100]">Bus <img
+                            src="images/bus-icon.png" alt=""></a>
+                </div>
+            </div>
+        </nav>
+        <!-- banner part here -->
+        <div>
+            <div class="hero min-h-screen rounded-2xl mt-6" style="background-image: url(images/banner.png);">
+                <!-- <div class="hero-overlay bg-opacity-60"></div> -->
+                <div class="hero-content text-center text-neutral-content">
+                    <div class="">
+                        <h1 class="mb-5 text-6xl text-[#FFFFFF] font-extrabold">End-to-End Travel with</h1>
+                        <h1 class="mb-8 text-6xl text-[#1DD100] font-extrabold">P Paribahan</h1>
+                        <p class="mb-8 font-inter text-[#A4A4A8] text-[18px] mx-80">Yes, you can run unit tests and view
+                            the results
+                            directly within the app. The integrated testing features allow for a streamlined.</p>
+                        <button class="btn  text-xl text-[#030712] font-bold bg-[#1DD100] border-none outline-none">Buy
+                            Tickets</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- main section -->
+    <main class="">
+        <section class=" container mx-auto my-20">
+            <div>
+                <h3 class="text-4xl text-[#030712] font-bold text-center">Best offers for you</h3>
+                <div class="flex gap-10 mt-10">
+
+                    <div class="bg-[#F78C9C] flex w-1/2 rounded-xl ">
+                        <div class="flex flex-col w-[55%] justify-center pl-20">
+                            <h3 class="text-4xl text-[#352C11] font-extrabold font-inter">20% OFF</h3>
+                            <h5 class="text-xl font-semibold text-[#352C11]">on your next purchase</h5>
+                            <p class="text-[18px] font-medium text-[03071280]">use by January 2024</p>
+                        </div>
+                        <div>
+                            <img src="images/cupon-devider.png" alt="">
+                        </div>
+                        <div class="flex flex-col  justify-center pl-10">
+                            <h3 class="text-3xl text-[#030712] font-bold">Couple 20</h3>
+                            <p class="text-[#03071266] font-medium text-xl">Coupon Code</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-20">
+                    <button class="btn text-[#1DD100] text-xl border-[#1DD100] bg-white ">See All Offers</button>
+                </div>
+            </div>
+        </section>
+        <section class="my-20 py-10 bg-[#F7F8F8] border-t border-[#1DD100] rounded-3xl">
+            <div>
+                <h3 class="text-4xl text-[#030712] font-bold text-center">P.H Paribahan</h3>
+                <p class="mt-4 mb-10 font-inter text-[#A4A4A8] text-[18px] mx-80 text-center">Yes, you can run unit
+                    tests and
+                    view the results directly within the app. The integrated testing features allow for a streamlined .
+                </p>
+                <!-- 550 tk part -->
+                <div class="container mx-auto">
+                    <div class="bg-[#FFFFFF] flex  rounded-xl">
+                        <div class="flex flex-col w-[75%] justify-center pl-20">
+                            <div>
+                                <div class="flex justify-between">
+                                    <div class="flex gap-4">
+                                        <img src="images/bus-logo.png" alt="">
+                                        <div>
+                                            <h3 class="text-[32px] text-[#030712] font-bold ">Greenline Paribahan</h3>
+                                            <p class="text-[#03071299] text-xl font-inter font-medium">Coach-009-WEB !
+                                                AC_Business</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <a
+                                            class="btn text-[#1DD100] font-bold text-xl bg-[#E8FAE5] border-1  border-[#1DD100]">
+                                            <img src="images/seat-green.png" alt="">
+                                            40 Seats left
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="bg-[#F7F8F8] rounded-2xl my-10 py-6 px-4">
+                                    <div class="flex justify-between">
+                                        <div class="text-[#03071299] text-xl font-semibold">
+                                            <h5>Route</h5>
+                                            <h5 class="py-5">Departure Time</h5>
+                                        </div>
+                                        <div class="text-[#030712] text-xl font-semibold">
+                                            <h5>Dhaka - Sylhet</h5>
+                                            <h5 class="py-5">9:00 PM</h5>
+                                        </div>
+
+                                    </div>
+                                    <div
+                                        class="text-[#030712cc] text-[16px] font-medium font-inter flex justify-around mt-5">
+                                        <p class="bg-[#EBECED] py-2 px-4 rounded-xl">Boarding Point - Laxmipur</p>
+                                        <p class="bg-[#EBECED] py-2 px-4 rounded-xl">Dropping Point - Bogura</p>
+                                        <p class="bg-[#EBECED] py-2 px-4 rounded-xl">Est. Time - 11 Hour</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div></div>
+
+                        </div>
+                        <div>
+                            <img src="images/info-devider.png" alt="">
+                        </div>
+                        <div class="flex flex-col justify-center pl-10">
+                            <img src="images/fare.png" alt="" class="w-16">
+                            <h3 class="text-3xl text-[#030712] font-bold mt-6"><span>500</span> Taka</h3>
+                            <p class="text-[#03071266] font-semibold text-xl">Per Seat</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- select seat part -->
+                <div class=" container mx-auto my-20 flex bg-[#FFFFFF] rounded-xl justify-around">
+                    <div class="border-2 border-red-400 w-[60%]">
+                        <h3 class="text-2xl font-semibold text-[#030712]">Select Your Seat</h3>
+                        <div class="flex min-w-screen justify-between ">
+                            <div class="flex gap-2 mt-4">
+                                <img src="images/seat-gray.png" alt="">
+                                <p class="text-[#03071280] text-xl font-medium font-inter">Available</p>
+                            </div>
+                            <div class="flex gap-2 mt-4">
+                                <img src="images/seat-green-filled.png" alt="">
+                                <p class="text-xl text-[#1DD100] font-inter font-medium">Selected</p>
+                            </div>
+                        </div>
+                        <div class="flex items-end justify-end ">
+                            <img src="images/wheel.png" alt="" class="py-2 px-10 bg-[#E6E6E7] rounded-xl mt-5">
+                        </div>
+                        <div class="grid grid-cols-5 gap-6 mt-10 text-center">
+                            <li>A</li>
+                            <li id="A1" class="seat">A1</li>
+                            <li id="A2" class="seat">A2</li>
+                            <li id="A3" class="seat">A3</li>
+                            <li id="A4" class="seat">A4</li>
+                            <li>B</li>
+                            <li id="B1" class="seat">B1</li>
+                            <li id="B2" class="seat">B2</li>
+                            <li id="B3" class="seat">B3</li>
+                            <li id="B4" class="seat">B4</li>
+                            <li>C</li>
+                            <li id="C1" class="seat">C1</li>
+                            <li id="C2" class="seat">C2</li>
+                            <li id="C3" class="seat">C3</li>
+                            <li id="C4" class="seat">C4</li>
+                            <li>D</li>
+                            <li id="D1" class="seat">D1</li>
+                            <li id="D2" class="seat">D2</li>
+                            <li id="D3" class="seat">D3</li>
+                            <li id="D4" class="seat">D4</li>
+                            <li>E</li>
+                            <li id="E1" class="seat">E1</li>
+                            <li id="E2" class="seat">E2</li>
+                            <li id="E3" class="seat">E3</li>
+                            <li id="E4" class="seat">E4</li>
+                            <li>F</li>
+                            <li id="F1" class="seat">F1</li>
+                            <li id="F2" class="seat">F2</li>
+                            <li id="F3" class="seat">F3</li>
+                            <li id="F4" class="seat">F4</li>
+                            <li>G</li>
+                            <li id="G1" class="seat">G1</li>
+                            <li id="G2" class="seat">G2</li>
+                            <li id="G3" class="seat">G3</li>
+                            <li id="G4" class="seat">G4</li>
+                            <li>H</li>
+                            <li id="H1" class="seat">H1</li>
+                            <li id="H2" class="seat">H2</li>
+                            <li id="H3" class="seat">H3</li>
+                            <li id="H4" class="seat">H4</li>
+                            <li>I</li>
+                            <li id="I1" class="seat">I1</li>
+                            <li id="I2" class="seat">I2</li>
+                            <li id="I3" class="seat">I3</li>
+                            <li id="I4" class="seat">I4</li>
+                            <li>J</li>
+                            <li id="J1" class="seat">J1</li>
+                            <li id="J2" class="seat">J2</li>
+                            <li id="J3" class="seat">J3</li>
+                            <li id="J4" class="seat">J4</li>
+                        </div>
+                    </div>
+                    <!-- select seat part-2 -->
+                    <div class="border-l-2 border-red-600 border-dotted">
+                        <h3 class="text-2xl font-semibold text-[#030712]">Select Your Seat</h3>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>
