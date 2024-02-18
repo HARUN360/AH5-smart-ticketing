@@ -17,9 +17,10 @@
 
     <!-- css style -->
     <style>
-        *{
+        * {
             list-style: none;
         }
+
         .font-raleway {
             font-family: "Raleway", sans-serif;
         }
@@ -27,7 +28,8 @@
         .font-inter {
             font-family: "Inter", sans-serif;
         }
-        .seat{
+
+        .seat {
             list-style: none;
             background-color: #E6E6E7;
             color: #03071280;
@@ -102,6 +104,20 @@
                 <h3 class="text-4xl text-[#030712] font-bold text-center">Best offers for you</h3>
                 <div class="flex gap-10 mt-10">
 
+                    <div class="bg-[#FFBF0F] flex w-1/2 rounded-xl ">
+                        <div class="flex flex-col w-[55%] justify-center pl-20">
+                            <h3 class="text-4xl text-[#352C11] font-extrabold font-inter">15% OFF</h3>
+                            <h5 class="text-xl font-semibold text-[#352C11]">on your next purchase</h5>
+                            <p class="text-[18px] font-medium text-[03071280]">use by January 2024</p>
+                        </div>
+                        <div>
+                            <img src="images/cupon-devider.png" alt="">
+                        </div>
+                        <div class="flex flex-col  justify-center pl-10">
+                            <h3 class="text-3xl text-[#030712] font-bold">NEW15</h3>
+                            <p class="text-[#03071266] font-medium text-xl">Coupon Code</p>
+                        </div>
+                    </div>
                     <div class="bg-[#F78C9C] flex w-1/2 rounded-xl ">
                         <div class="flex flex-col w-[55%] justify-center pl-20">
                             <h3 class="text-4xl text-[#352C11] font-extrabold font-inter">20% OFF</h3>
@@ -116,6 +132,8 @@
                             <p class="text-[#03071266] font-medium text-xl">Coupon Code</p>
                         </div>
                     </div>
+                    
+                </div>
                 </div>
                 <div class="text-center mt-20">
                     <button class="btn text-[#1DD100] text-xl border-[#1DD100] bg-white ">See All Offers</button>
@@ -185,16 +203,16 @@
                     </div>
                 </div>
                 <!-- select seat part -->
-                <div class=" container mx-auto my-20 flex bg-[#FFFFFF] rounded-xl justify-around">
-                    <div class="border-2 border-red-400 w-[60%]">
-                        <h3 class="text-2xl font-semibold text-[#030712]">Select Your Seat</h3>
+                <div class=" container mx-auto my-20 flex bg-[#FFFFFF] rounded-xl p-6 ">
+                    <div class=" w-[60%] pr-5">
+                        <h3 class="text-2xl font-semibold text-[#030712] pl-12">Select Your Seat</h3>
                         <div class="flex min-w-screen justify-between ">
-                            <div class="flex gap-2 mt-4">
+                            <div class="flex gap-2 mt-4 ml-12">
                                 <img src="images/seat-gray.png" alt="">
                                 <p class="text-[#03071280] text-xl font-medium font-inter">Available</p>
                             </div>
-                            <div class="flex gap-2 mt-4">
-                                <img src="images/seat-green-filled.png" alt="">
+                            <div class="flex gap-2 mt-4 ">
+                                <img src="images/seat-green-filled.png" alt="" class="">
                                 <p class="text-xl text-[#1DD100] font-inter font-medium">Selected</p>
                             </div>
                         </div>
@@ -255,14 +273,112 @@
                         </div>
                     </div>
                     <!-- select seat part-2 -->
-                    <div class="border-l-2 border-red-600 border-dotted">
-                        <h3 class="text-2xl font-semibold text-[#030712]">Select Your Seat</h3>
+                    <div class=" border-l-4  border-dashed border-[#E6E6E7] pl-6 w-[40%]">
+                        <h3 class="text-2xl font-semibold text-[#030712] pb-6">Select Your Seat</h3>
+                        <!-- total price part -->
+                        <div class="bg-[#F7F8F8] rounded-2xl py-10 px-8">
+                            <div class=" flex justify-between border-b-4 py-4 ">
+                                <div>
+                                    <div class="text-[#030712] font-bold text-xl font-inter flex gap-2 pb-5">
+                                        <h3>Seat</h3> <span
+                                            class="bg-[#1DD100] text-[#FFFFFF] text-sm  px-3 h-5 rounded-full flex items-center mt-[6px] ">2</span>
+                                    </div>
+                                    <p class="text-[#03071299] text-lg font-medium font-inter pb-2">C2</p>
+                                    <p class="text-[#03071299] text-lg font-medium font-inter">C2</p>
 
+                                </div>
+                                <div>
+                                    <h3 class="text-[#030712] font-bold text-xl font-inter  pb-5">Class</h3>
+                                    <p class="text-[#03071299] text-lg font-medium font-inter pb-2">Economoy</p>
+                                    <p class="text-[#03071299] text-lg font-medium font-inter">Economoy</p>
+
+                                </div>
+                                <div>
+
+                                    <h3 class="text-[#030712] font-bold text-xl font-inter  pb-5">Price</h3>
+                                    <p class="text-[#03071299] text-lg font-medium font-inter pb-2">550</p>
+                                    <p class="text-[#03071299] text-lg font-medium font-inter">550</p>
+
+                                </div>
+
+
+                            </div>
+                            <div class="flex justify-between pt-2">
+                                <h3 class="text-[#030712] font-bold text-xl font-inter">Total Price</h3>
+                                <h3 class="text-[#030712] font-bold text-xl font-inter">BDT 1100</h3>
+                            </div>
+                            <!-- input btn -->
+                            <div class="py-4">
+                                <label
+                                    class="input input-bordered flex items-center justify-between gap-2 py-7 border-none">
+                                    <input class="text-[#03071266] font-inter text-lg " type="text"
+                                        class="grow" placeholder="Have any copupon?" />
+                                    <span
+                                        class="badge rounded-xl text-[#FFFFFF] font-semibold font-inter text-lg bg-[#1DD100] py-5 px-6">Apply</span>
+                                </label>
+                            </div>
+                            <div class="flex justify-between pt-2">
+                                <h3 class="text-[#030712] font-bold text-xl font-inter">Grand Total</h3>
+                                <h3 class="text-[#030712] font-bold text-xl font-inter">BDT 1100</h3>
+                            </div>
+                        </div>
+                        <!-- passanger name -->
+                        <div>
+                            <label class="form-control w-full">
+                                <div class="label">
+                                    <span class="label-text text-xl font-semibold text-[#030712] pt-2">Passenger Name*</span>
+                                   
+                                </div>
+                                <input type="text" placeholder="Enter your name"
+                                    class="input input-bordered w-full text-[#03071266] font-inter text-lg font-medium border-none" />
+                               
+                            </label>
+                            <label class="form-control w-full">
+                                <div class="label">
+                                    <span class="label-text text-xl font-semibold text-[#030712] pt-2">Phone Number*</span>
+                                   
+                                </div>
+                                <input type="number" placeholder="Enter your phone number"
+                                    class="input input-bordered w-full text-[#03071266] font-inter text-lg font-medium border-none" />
+                               
+                            </label>
+                            <label class="form-control w-full">
+                                <div class="label">
+                                    <span class="label-text text-xl font-semibold text-[#030712] pt-2">Email ID</span>
+                                   
+                                </div>
+                                <input type="email" placeholder="Enter your email id"
+                                    class="input input-bordered w-full text-[#03071266] font-inter text-lg font-medium border-none" />
+                               
+                            </label>
+                        </div>
+                        <!-- btn -->
+                        <div class="pt-2">
+                            <button class="btn  text-xl text-[#FFFFFF] font-extrabold bg-[#1DD100] border-none outline-none w-full">Next</button>
+                            <div class="font-inter text-[#03071299] flex justify-around pt-2">
+                                <a href="#" class="underline">Terms and Conditions</a>
+                                <a href="#" class="underline">Cancellation Policy</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+    <!-- main -->
+    <footer class="footer p-10 bg-neutral flex flex-col-2 justify-between text-neutral-content">
+  <aside>
+    <h3 class="font-extrabold text-4xl text-white">P-Ticket</h3>
+    <p class="text-[#FFFFFFcc] text-sm font-inter font-medium">P-Ticket is a digital platform to make your <br> daily commuting better.</p>
+  </aside> 
+  <nav>
+    <h6 class="footer-title">Social</h6> 
+    <div class="grid grid-flow-col gap-4">
+        <h3>Download our app</h3>
+      <a><img src="images/playstore.png" alt=""></a>
+    </div>
+  </nav>
+</footer>
 </body>
 
 </html>
