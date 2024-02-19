@@ -3,7 +3,6 @@ let count = 0;
 let seatTotal = 40;
 for (const btn of allBtn) {
     btn.addEventListener('click', function (e) {
-
         count = count + 1;
         seatTotal = seatTotal - 1;
         if(count <= 4 ){
@@ -22,7 +21,6 @@ for (const btn of allBtn) {
         div.appendChild(p2);
         div.appendChild(p3);
         selectedContainer.appendChild(div);
-
         //total cost
         const priceValue = document.getElementById('seat-amount');
         const price = parseInt(priceValue.innerText);
@@ -36,15 +34,11 @@ for (const btn of allBtn) {
         e.target.style.cursor = 'not-allowed';
         e.target.style.pointerEvents = 'none';
         }
-        //    just 4value count
        else{
         btn.setAttribute('disabled', true);
     }
-    
     const nextBtn = document.getElementById('next-btn');
        nextBtn.removeAttribute('disabled');
-     
-        
     })
 
 }
@@ -97,9 +91,7 @@ document.getElementById('btn-delete').addEventListener('click',function(e){
     alert ('please give Coupon Code');
 }  
 
-
 })
-
 
 // hide and show element
 function hideElementById(element){
