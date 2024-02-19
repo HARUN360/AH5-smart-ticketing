@@ -27,7 +27,10 @@ for (const btn of allBtn) {
         const priceValue = document.getElementById('seat-amount');
         const price = parseInt(priceValue.innerText);
         totalCost('total-price', price);
-        
+        //grant cost
+        const grantConst = document.getElementById('grand-total');
+        const grandPrice = parseInt(grantConst.innerText);
+        totalCost('grand-total', price);
         // background & disable button
         e.target.style.background = '#1DD100';
         e.target.style.cursor = 'not-allowed';
@@ -36,9 +39,11 @@ for (const btn of allBtn) {
         //    just 4value count
        else{
         btn.setAttribute('disabled', true);
-       }
-      
-       
+    }
+    
+    const nextBtn = document.getElementById('next-btn');
+       nextBtn.removeAttribute('disabled');
+     
         
     })
 
@@ -55,35 +60,63 @@ function totalCost(id, value) {
 function setInnerText(id, value) {
     document.getElementById(id).innerText = value;
 }
+// apply btn
+document.getElementById('btn-delete').addEventListener('click',function(e){
+ const value =   document.getElementById('delete-confirm').value;
+ const totalCost = document.getElementById('total-price').innerText;
+ const totalCostConvet = parseInt(totalCost);
+ if(value === 'NEW15'){
+    const discount = totalCostConvet *0.15;
+     const discountNew = totalCostConvet - discount;
+     document.getElementById('grand-total').innerText = discountNew;
+     const selectedContainer1 = document.getElementById('selected-place-container1');
+     const li = document.createElement('li');
+     const p = document.createElement('p');
+     p.innerText = 'discount';
+     const p2 = document.createElement('p');
+     p2.innerText = discount;
+     li.appendChild(p);
+     li.appendChild(p2);
+     selectedContainer1.appendChild(li);
+     e.target.parentNode.parentNode.style.display = "none";
+}else if (value === 'Couple 20'){
+    const discount = totalCostConvet *0.20;
+    const discountCouple = totalCostConvet - discount;
+    document.getElementById('grand-total').innerText = discountCouple;
+    const selectedContainer1 = document.getElementById('selected-place-container1');
+    const li = document.createElement('li');
+    const p = document.createElement('p');
+    p.innerText = 'discount';
+    const p2 = document.createElement('p');
+    p2.innerText = discount;
+    li.appendChild(p);
+    li.appendChild(p2);
+    selectedContainer1.appendChild(li);
+    e.target.parentNode.parentNode.style.display = "none";
+}else{
+    alert ('please give Coupon Code');
+}  
 
-// delete 
-document.getElementById('delete-confirm').addEventListener('keyup', function(event){
-    const text = event.target.value;
-    // console.log(text);
-    const deleteButton = document.getElementById('btn-delete');
-    if(text === 'NEW15'){
-        deleteButton.removeAttribute('disabled');
-    }
-    else if (text === 'Couple20' || text === 'Couple 20'){
-        deleteButton.removeAttribute('disabled');
-    }
-    else{
-        deleteButton.setAttribute('disabled', true);
-    }
+
 })
-document.getElementById('btn-delete').addEventListener('click', function(){
-   const secret = document.getElementById('grand-total');
-   const secret2 = document.getElementById('total-price');
-   secret.innerText = secret2.innerText;
-   document.getElementById('delete-confirm').value = '';
-})
 
 
+// hide and show element
+function hideElementById(element){
+    const hideId = document.getElementById(element);
+    hideId.classList.add('hidden');
+}
 
+function showElementById(element){
+    const show = document.getElementById(element);
+    show.classList.remove('hidden');
+}
 
-
-
-
-
-
-
+function display(){
+    hideElementById('heder-section');
+    hideElementById('section-1');
+    hideElementById('section-2');
+    hideElementById('footer-title');
+    showElementById('out-site')
+}
+document.getElementById('next-btn').setAttribute('disabled', true);
